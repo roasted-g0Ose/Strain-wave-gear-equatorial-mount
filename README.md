@@ -1,4 +1,15 @@
 # Strain Wave Gear Equatorial Mount
+## What is an equatorial mount?
+
+![alt text](Renderings/image(1).png)
+
+![alt text](Renderings/image(2).png)
+
+An **equatorial mount** is a telescope mount designed to compensate for the Earth's rotation and track celestial objects as they move across the sky. It consists of two axes known as the **right ascension (RA)** and **declination (DEC)**.
+
+RA axis is aligned parallel to the Earth's rotational axis, allowing the mount to rotate at the same rate as the sky appears to move. By continuously rotating around the RA axis, the mount can effectively cancel out the Earth's rotation and keep a celestial object centered in the telescope's field of view.
+
+DEC axis is perpendicular to the RA axis and is used to adjust the telescope's position north or south of the celestial equator. By controlling both the RA and DEC axes, the mount can slew to a specific celestial coordinate and point the telescope at a desired object in the night sky. Once positioned, the RA axis can continue tracking the object as the Earth rotates.
 
 ## Comparison of Primary Reduction Gears
 
@@ -37,7 +48,7 @@ Although the third and fourth options are attractive for their sustainability (r
 | ZXS14 (100:1, for shaft diameter of 8mm) | $85.40 | 2 |
 
 ### BOM - Mechanical
-| Component | Price/unit (USD)* | Quantity |
+| Component | Price/unit (USD) | Quantity |
 |---|---|---|
 | Phillips Round Head Screw, M3 x 3 | $0.02 | 4 |
 | Hex Socket Countersunk Head Screw, M3 x 12 | $0.03 | 10 |
@@ -47,6 +58,7 @@ Although the third and fourth options are attractive for their sustainability (r
 | Hex Socket Head Cap Screw, M4 x 12 | $0.05 | 3 |
 | Hex Socket Countersunk Head Screw, M4 x 12 | $0.05 | 4 |
 | Hex Socket Head Cap Screw, M4 x 20 | $0.06 | 12 |
+| Hex Socket Head Cap Screw, M6 x 10 | $0.10 | 4 |
 | Hex Socket Head Cap Screw, M4 x 18 | $0.10 | 6 |
 | Dovetail holder | $12.95 | 1 |
 | Super Lube MULTI-PURPOSE SYNTHETIC GREASE WITH SYNCOLON (PTFE) | $18.03 | 1 |
@@ -56,7 +68,7 @@ Although the third and fourth options are attractive for their sustainability (r
 
 | | Total |
 |---|---|
-| **Total BOM Cost (USD)** | $945.76 |
+| **Total BOM Cost (USD)** | $946.14 |
 
 *Calculated based on the current (Sep 7th 2026) exchange rate of 1 KRW = $0.00074.  
 **Emits red light.
