@@ -190,7 +190,7 @@
 #define PARK_STRICT                   OFF //    OFF, ON Un-parking is only allowed if successfully parked.                    Option
 
 // PEC ------------------------------------------------------------ see https://onstep.groups.io/g/main/wiki/Configuration_Mount#PEC
-#define PEC_STEPS_PER_WORM_ROTATION 12800 //      0, n. Steps per worm rotation (0 disables else 720 sec buffer allocated.)  <-Req'd
+#define PEC_STEPS_PER_WORM_ROTATION     0 //      0, n. Steps per worm rotation (0 disables else 720 sec buffer allocated.)  <-Req'd
                                           //         n = (AXIS1_STEPS_PER_DEGREE*360)/reduction_final_stage
 
 #define PEC_SENSE                     OFF //    OFF, HIGH. Senses the PEC signal rising edge or use LOW for falling edge.     Option

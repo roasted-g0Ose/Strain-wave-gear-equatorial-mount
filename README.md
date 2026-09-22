@@ -6,6 +6,8 @@
 
 ![build_process3](./Renderings/build_process3.jpg)
 
+![build_process4](./Renderings/build_process4.jpg)
+
 An **equatorial mount** is a telescope mount designed to compensate for the Earth's rotation and track celestial objects as they move across the sky. It consists of two axes known as the **right ascension (RA)** and **declination (DEC)**.
 
 The RA axis is aligned parallel to the Earth's rotational axis, allowing the mount to rotate at the same rate as the sky appears to move. By continuously rotating around the RA axis, the mount can effectively cancel out the Earth's rotation and keep a celestial object centered in the telescope's field of view.
@@ -43,6 +45,7 @@ Although the third and fourth options are attractive for their low maintenance (
 | 40PCS 10cm female-to-male Dupont jumper wire | $0.94 | 1 |
 | 40PCS 10cm male-to-male Dupont jumper wire | $1.04 | 1 |
 | MB85RC256V I2C FRAM Memory Module | $2.96 | 1 |
+| DS3231 RTC Module | $2.34 | 1 |
 | 12mm push button with latching reset 9-30V(12V)** | $3.15 | 1 |
 | 17HS4401 NEMA17 Stepper Motor | $4.66 | 2 |
 | FLE42-L2SW (20:1) | $18.46 | 2 |
@@ -70,7 +73,7 @@ Although the third and fourth options are attractive for their low maintenance (
 
 | | Total |
 |---|---|
-| **Total BOM Cost (USD)** | $946.14 |
+| **Total BOM Cost (USD)** | $948.48 |
 
 *Calculated based on the current (Sep 7th 2026) exchange rate of 1 KRW = $0.00074.  
 **Emits red light.
@@ -115,6 +118,10 @@ I made several changes to the default [OnStepX-E4](https://github.com/hjd1964/On
 #define TIME_LOCATION_SOURCE       DS3231
 ```
 
+```cpp
+// Not a worm-gear mount, fast guiding compensates for PE
+#define PEC_STEPS_PER_WORM_ROTATION        0
+```
 ```cpp
 #define TRACK_AUTOSTART      ON
 ```
