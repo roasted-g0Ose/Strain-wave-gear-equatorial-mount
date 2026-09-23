@@ -171,3 +171,5 @@ The behavior was inconsistent. Sometimes the LED would come back on after a full
 * Use a strain wave gear as the primary reducer instead of planetary gear to eliminate backlash while maintaining a high reduction ratio.
 
 * Add a buzzer to provide audible feedback on the mount's status, making it possible to monitor its state without having to look at the mount.
+
+* Add another opening for the onboard USB-B connector. It is structurally more rigid and can serve as a backup interface in the field if the USB-C port fails.
