@@ -1,12 +1,7 @@
 # Strain Wave Gear Equatorial Mount
 ## What is an equatorial mount?
-![build_process1](./Renderings/build_process1.jpg)
-
-![build_process2](./Renderings/build_process2.jpg)
-
-![build_process3](./Renderings/build_process3.jpg)
-
-![build_process4](./Renderings/build_process4.jpg)
+![build_process](./Renderings/build_process.png)
+![final_product](./Renderings/final_product.png)
 
 An **equatorial mount** is a telescope mount designed to compensate for the Earth's rotation and track celestial objects as they move across the sky. It consists of two axes known as the **right ascension (RA)** and **declination (DEC)**.
 
@@ -69,11 +64,11 @@ Although the third and fourth options are attractive for their low maintenance (
 | Super Lube MULTI-PURPOSE SYNTHETIC GREASE WITH SYNCOLON (PTFE) | $18.03 | 1 |
 | Loctite 638 | $18.50 | 1 |
 | CNC machined parts (6 in total, tariff excluded) | $639.31 | 1 |
-| Heat shrink | N/A | N/A |
+| Heat shrink set | $2.66 | 1 |
 
 | | Total |
 |---|---|
-| **Total BOM Cost (USD)** | $948.48 |
+| **Total BOM Cost (USD)** | $951.10 |
 
 *Calculated based on the current (Sep 7th 2026) exchange rate of 1 KRW = $0.00074.  
 **Emits red light.
@@ -119,7 +114,7 @@ I made several changes to the default [OnStepX-E4](https://github.com/hjd1964/On
 ```
 
 ```cpp
-// Not a worm-gear mount, fast guiding compensates for PE
+// Not a worm gear mount, fast guiding compensates for PE (Periodic Error)
 #define PEC_STEPS_PER_WORM_ROTATION        0
 ```
 ```cpp
@@ -156,5 +151,23 @@ For uploading instructions, please refer to [OnStep Wiki](https://onstep.groups.
 The behavior was inconsistent. Sometimes the LED would come back on after a full reboot cycle, but often it would never come back at all. This is likely caused by repeated connection retries reasserting DTR during the reboot process before the board has a chance to finish booting.
 
 **Fix (soft and hard fixes):**
-- In the ASCOM OnStep driver's Setup dialog, set the Serial Interface baud dropdown to the **"no DTR control"** variant. This does not prevent Status LED reset upon opening the NINA OnStep Telescope Setup tab, but makes sure the LED comes back on after a full reboot cycle.
-- In Windows Device Manager → Ports → [COM port] → Properties → Port Settings → Advanced, enable **"Disable Modem Ctrl Handshaking."** This completely prevents Status LED reset.
+* In the ASCOM OnStep driver's Setup dialog, set the Serial Interface baud dropdown to the **"no DTR control"** variant. This does not prevent Status LED reset upon opening the NINA OnStep Telescope Setup tab, but makes sure the LED comes back on after a full reboot cycle.
+* In Windows Device Manager → Ports → [COM port] → Properties → Port Settings → Advanced, enable **"Disable Modem Ctrl Handshaking."** This completely prevents Status LED reset.
+
+### NINA's home position function does not work and GOTO function immediately settles
+**Cause:** FRAM module is corrupt.
+
+**Fix:** Replace FRAM.
+
+
+### Mount behaves normally when the housing is not mounted, while it behaves abnormally when the housing is mounted
+**Cause:** The reset switch on the board is physically pressed against the mount housing.
+
+**Fix:** Trim off the end of the reset switch.
+
+## Room for further improvement
+* 3D print a non-metallic panel to provide easier access to the mount's power and control interfaces.
+
+* Use a strain wave gear as the primary reducer instead of planetary gear to eliminate backlash while maintaining a high reduction ratio.
+
+* Add a buzzer to provide audible feedback on the mount's status, making it possible to monitor its state without having to look at the mount.
