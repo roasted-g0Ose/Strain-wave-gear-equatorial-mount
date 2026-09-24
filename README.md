@@ -102,10 +102,10 @@ I made several changes to the default [OnStepX-E4](https://github.com/hjd1964/On
 
 ```cpp
 // These options can be toggled ON and OFF for reversal of direction of rotation. 
-// As you can see, my DEC axis was somewhat rotating in the wrong direction.
+// As you can see, my RA axis was somewhat rotating in the wrong direction.
 
-#define AXIS1_REVERSE      OFF
-#define AXIS2_REVERSE      ON
+#define AXIS1_REVERSE      ON
+#define AXIS2_REVERSE      OFF
 ```
 
 ```cpp
