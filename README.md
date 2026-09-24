@@ -1,13 +1,14 @@
 # Strain Wave Gear Equatorial Mount
 ## What is an equatorial mount?
-![build_process](./Renderings/build_process.png)
-![final_product](./Renderings/final_product.png)
 
 An **equatorial mount** is a telescope mount designed to compensate for the Earth's rotation and track celestial objects as they move across the sky. It consists of two axes known as the **right ascension (RA)** and **declination (DEC)**.
 
 The RA axis is aligned parallel to the Earth's rotational axis, allowing the mount to rotate at the same rate as the sky appears to move. By continuously rotating around the RA axis, the mount can effectively cancel out the Earth's rotation and keep a celestial object centered in the telescope's field of view.
 
 The DEC axis is perpendicular to the RA axis and is used to adjust the telescope's position north or south of the celestial equator. By controlling both the RA and DEC axes, the mount can slew to a specific celestial coordinate and point the telescope at a desired object in the night sky. Once positioned, the RA axis can continue tracking the object as the Earth rotates.
+
+![build_process](./Renderings/build_process.png)
+![final_product](./Renderings/final_product.png)
 
 ## Comparison of Primary Reduction Gears
 
